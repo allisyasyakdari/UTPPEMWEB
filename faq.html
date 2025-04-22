@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Sistem Pelacakan Paket</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 900px;
+            margin: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 20px;
+        }
+        
+        h1 {
+            color: #1a73e8;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #555;
+            margin-bottom: 30px;
+        }
+        
+        .nav {
+            display: flex;
+            background-color: #1a73e8;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+        
+        .nav-item {
+            padding: 12px 15px;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            flex-grow: 1;
+            transition: background-color 0.3s;
+        }
+        
+        .nav-item:hover {
+            background-color: #1557b0;
+        }
+        
+        .faq-container {
+            margin-top: 20px;
+        }
+        
+        .faq-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+        
+        .faq-question {
+            font-weight: bold;
+            color: #1a73e8;
+            margin-bottom: 10px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-question:after {
+            content: '+';
+            font-size: 20px;
+            transition: transform 0.3s;
+        }
+        
+        .faq-question.active:after {
+            transform: rotate(45deg);
+        }
+        
+        .faq-answer {
+            display: none;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 4px;
+            line-height: 1.6;
+        }
+        
+        .faq-answer.show {
+            display: block;
+        }
+        
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+        
+        button {
+            background-color: #1a73e8;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        button:hover {
+            background-color: #1557b0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sistem Pelacakan Paket</h1>
+        <p class="subtitle">Masukkan nomor resi untuk melacak status pengiriman paket Anda</p>
+        
+        <div class="nav">
+            <a href="tampilanahwal.html" class="nav-item">Beranda</a>
+            <a href="#" class="nav-item">Status</a>
+            <a href="#" class="nav-item">Riwayat</a>
+            <a href="#" class="nav-item">Kontak</a>
+            <a href="faq.html" class="nav-item" style="background-color: #1557b0;">FAQ</a>
+        </div>
+        
+        <h2>Pertanyaan yang Sering Diajukan</h2>
+        
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">Bagaimana cara melacak paket saya?</div>
+                <div class="faq-answer">
+                    Untuk melacak paket Anda, cukup masukkan nomor resi pengiriman pada kotak pencarian di halaman beranda, lalu klik tombol "Lacak Paket". Sistem akan menampilkan status terkini dari pengiriman paket Anda.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Berapa lama waktu pengiriman?</div>
+                <div class="faq-answer">
+                    Waktu pengiriman bervariasi tergantung pada destinasi dan jenis layanan yang dipilih. Umumnya, pengiriman dalam kota membutuhkan waktu 1-2 hari kerja, pengiriman antar kota 2-4 hari kerja, dan pengiriman antar pulau 3-7 hari kerja.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Apa yang harus dilakukan jika paket saya tertunda?</div>
+                <div class="faq-answer">
+                    Jika status paket Anda menunjukkan penundaan, Anda dapat menghubungi layanan pelanggan kami melalui halaman kontak atau nomor telepon yang tertera. Tim layanan pelanggan kami akan membantu menyelesaikan masalah tersebut.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Bagaimana jika nomor resi saya tidak terlacak?</div>
+                <div class="faq-answer">
+                    Jika nomor resi Anda tidak dapat dilacak, periksa kembali apakah nomor yang dimasukkan sudah benar. Jika sudah benar, mohon tunggu 1-2 jam, karena terkadang dibutuhkan waktu untuk memperbarui data dalam sistem. Jika masih bermasalah, hubungi layanan pelanggan kami.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Apakah sistem melacak pengiriman internasional?</div>
+                <div class="faq-answer">
+                    Ya, sistem kami mampu melacak pengiriman internasional. Pastikan Anda memasukkan nomor resi pengiriman internasional yang benar. Namun perlu diperhatikan bahwa waktu pembaruan status untuk pengiriman internasional mungkin lebih lama dibandingkan pengiriman domestik.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Bagaimana cara mengajukan klaim untuk paket yang rusak atau hilang?</div>
+                <div class="faq-answer">
+                    Untuk mengajukan klaim, silakan hubungi layanan pelanggan kami dengan menyertakan nomor resi, detail paket, dan bukti pengiriman. Tim kami akan memproses klaim Anda dalam waktu 3-5 hari kerja dan menginformasikan langkah selanjutnya.
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var questions = document.querySelectorAll('.faq-question');
+                
+                questions.forEach(function(question) {
+                    question.addEventListener('click', function() {
+                        var answer = this.nextElementSibling;
+                        
+                        // Toggle active class on question
+                        this.classList.toggle('active');
+                        
+                        // Toggle show class on answer
+                        if (answer.classList.contains('show')) {
+                            answer.classList.remove('show');
+                        } else {
+                            answer.classList.add('show');
+                        }
+                    });
+                });
+            });
+        </script>
+    </div>
+</body>
+</html>

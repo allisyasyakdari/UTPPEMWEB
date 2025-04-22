@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lacak Paket - Beranda</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        h1 {
+            color: #1a73e8;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .tracking-form {
+            margin-top: 30px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #1a73e8;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0d5bbc;
+        }
+        .navbar {
+            background-color: #1a73e8;
+            overflow: hidden;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: #0d5bbc;
+        }
+        .navbar a.active {
+            background-color: #0d5bbc;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Sistem Pelacakan Paket</h1>
+            <p>Masukkan nomor resi untuk melacak status pengiriman paket Anda</p>
+        </header>
+
+        <div class="navbar">
+            <a href="tampilanawal.html" class="active">Beranda</a>
+            <a href="statuspaket.html">Status</a>
+            <a href="riwayat.html">Riwayat</a>
+            <a href="kontak.html">Kontak</a>
+            <a href="faq.html">FAQ</a>
+        </div>
+
+        <div class="tracking-form">
+            <form id="trackingForm">
+                <input type="text" id="trackingNumber" placeholder="Masukkan nomor resi pengiriman..." required>
+                <button type="submit" onclick="location.href='statuspaket.html'">Lacak Paket</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('trackingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const trackingNumber = document.getElementById('trackingNumber').value;
+            
+            // Simpan nomor resi di localStorage agar bisa diakses di halaman lain
+            localStorage.setItem('trackingNumber', trackingNumber);
+            
+            // Arahkan ke halaman status
+            window.location.href = 'statuspaket.html';
+        });
+    </script>
+</body>
+</html>
