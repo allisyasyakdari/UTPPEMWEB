@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lacak Paket - Kontak</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        h1 {
+            color: #1a73e8;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .navbar {
+            background-color: #1a73e8;
+            overflow: hidden;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: #0d5bbc;
+        }
+        .navbar a.active {
+            background-color: #0d5bbc;
+            font-weight: bold;
+        }
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .contact-form {
+            flex: 1;
+            min-width: 300px;
+        }
+        .contact-info {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        button {
+            background-color: #1a73e8;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0d5bbc;
+        }
+        .contact-method {
+            margin-bottom: 20px;
+        }
+        .contact-method h3 {
+            color: #1a73e8;
+            margin-bottom: 10px;
+        }
+        .contact-method p {
+            margin: 5px 0;
+        }
+        .social-links {
+            margin-top: 20px;
+        }
+        .social-links a {
+            display: inline-block;
+            margin-right: 15px;
+            color: #1a73e8;
+            text-decoration: none;
+        }
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Hubungi Kami</h1>
+            <p>Jika Anda memiliki pertanyaan atau membutuhkan bantuan</p>
+        </header>
+
+        <div class="navbar">
+            <a href="tampilanawal.html">Beranda</a>
+            <a href="statuspaket.html">Status</a>
+            <a href="riwayat.html">Riwayat</a>
+            <a href="kontak.html" class="active">Kontak</a>
+            <a href="faq.html">FAQ</a>
+        </div>
+
+        <div class="contact-container">
+            <div class="contact-form">
+                <h2>Kirim Pesan</h2>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Nama Lengkap</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subjek</label>
+                        <select id="subject" name="subject">
+                            <option value="question">Pertanyaan</option>
+                            <option value="problem">Masalah dengan Pengiriman</option>
+                            <option value="complaint">Keluhan</option>
+                            <option value="other">Lainnya</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Pesan</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit">Kirim Pesan</button>
+                </form>
+            </div>
+
+            <div class="contact-info">
+                <h2>Informasi Kontak</h2>
+                
+                <div class="contact-method">
+                    <h3>Alamat</h3>
+                    <p>Jl. Pengiriman Cepat No. 123</p>
+                    <p>Jakarta Pusat, 10110</p>
+                    <p>Indonesia</p>
+                </div>
+                
+                <div class="contact-method">
+                    <h3>Telepon</h3>
+                    <p>Customer Service: (021) 1234-5678</p>
+                    <p>Layanan Pengaduan: (021) 8765-4321</p>
+                </div>
+                
+                <div class="contact-method">
+                    <h3>Email</h3>
+                    <p>info@trackpaket.com</p>
+                    <p>cs@trackpaket.com</p>
+                </div>
+                
+                <div class="contact-method">
+                    <h3>Jam Operasional</h3>
+                    <p>Senin - Jumat: 08.00 - 20.00 WIB</p>
+                    <p>Sabtu: 09.00 - 15.00 WIB</p>
+                    <p>Minggu & Hari Libur: Tutup</p>
+                </div>
+                
+                <div class="social-links">
+                    <h3>Ikuti Kami</h3>
+                    <a href="#">Facebook</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Pesan Anda telah terkirim. Kami akan menghubungi Anda secepatnya!');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
